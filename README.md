@@ -2,4 +2,4 @@ Esse é meu portifólio de informações e projetos como desenvolvedor web front
 <br/>
 Espero que goste! <br/>
 <br/>
-Link do [deploy](igor93araujo/Portif-lio-Igor-Barbosa)
+Link do [deploy](https://portifolio-igor-barbosa-dev.vercel.app/)
