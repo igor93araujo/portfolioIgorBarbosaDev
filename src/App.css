@@ -1,0 +1,361 @@
+body {
+  background-color: #0a192f;
+  width: 100vw;
+  overflow-x: hidden;
+}
+.fixed-contacts {
+  position: fixed;
+  bottom: 0;
+  left: -1%;
+}
+.social-contact li {
+  list-style: none;
+  margin-bottom: 20%;  
+}
+.social-contact a {
+  color: white;
+  text-decoration: none;
+}
+
+.social-contact a:hover {
+  color:#63EDD2;
+}
+
+.contact-line {
+  content: "";
+  width: 1px;
+  height: 90px;
+  margin-left: 50%;
+  margin-top: 0.5%;
+  background-color: white
+}
+
+header {
+  position:fixed;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  padding: 0 30px 0 30px;
+  transition: all ease 0.5s;
+  height: 4rem;
+  font-family: 'Inknut Antiqua', serif;
+  text-decoration: none;
+  background-color: #0a192f;
+  box-shadow: rgba(141, 141, 141, 0.1) 0px 20px 25px -5px, rgba(164, 164, 164, 0.04) 0px 10px 10px -5px;
+}
+
+.theme-icon {
+  width: 4rem;
+  height: 2rem;
+  color: white;
+  margin-top: 1%;
+  cursor: pointer;
+}
+
+.hoverMessage {
+  display: none;
+}
+.theme-icon:hover + .hoverMessage {
+  display: block;
+  color: white;
+}
+
+.lightMode {
+  background-color: rgb(255, 255, 255);
+}
+
+.lightMode header {
+  background-color:#164910;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.lightMode header li a {
+ color:#d3d8d1;
+}
+
+.lightMode a,
+.lightMode p,
+.lightMode h1,
+.lightMode h3
+.lightMode li,
+.lightMode li a,
+.lightMode .repoLink,
+.lightMode .testLink{
+  color: #1c1b1b;
+}
+
+.lightMode .contactContainer li {
+  color: #1c1b1b;
+}
+
+.lightMode .aboutSideLine,
+.lightMode .techSideLine,
+.lightMode .contact-line {
+  background-color: #1d1b1b;
+}
+
+.lightMode .firstP,
+.lightMode .thirdP,
+.lightMode .span,
+.lightMode .proj-title {
+  color:#093603;
+}
+
+.lightMode .secondP,
+.lightMode .forthP {
+  color:#000000;
+}
+
+.darkMode {
+  background-color: #0a192f;
+}
+
+.darkMode a {
+  color: white;
+}
+
+.logoIcon {
+  color: white;
+  box-sizing:inherit;
+  width: 200%;
+  height: 200%;
+}
+
+.header-tags {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  list-style: none;
+}
+
+.header-tags a:hover {
+  border-bottom: 1px solid rgb(255, 255, 255);
+  border-radius:5px;
+}
+
+#presentation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
+  gap: 30%;
+}
+
+#foto-igor {
+  width: 40%;
+  height: 80%;
+  cursor: pointer;
+  filter: contrast(120%);
+}
+
+.presentation-text {
+  width: 50%;
+  margin-left: 15%;
+}
+
+#fullDescription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 5%;
+}
+
+p, h1{
+  font-family: 'Inknut Antiqua', serif;
+  color: white;
+}
+
+.textDescription {
+  width: 50%;
+}
+
+.textDescription p {
+  margin-top: 5%;
+  text-align: justify;
+  font-size:  1rem;
+}
+
+.textDescription span {
+  color: #63EDD2;
+  font-weight: 700;
+}
+
+.aboutSideLine {
+  content: "";
+  width: 25rem;
+  height: .1rem;
+  margin-left: 35%;
+  margin-top: -6%;
+  background-color: white;
+}
+
+.firstP {
+  color:#63EDD2;
+  font-weight: 600;
+  }
+  
+  .secondP,
+  .forthP,
+  .fifthP {
+    color: rgb(163, 158, 158);
+    text-align: justify;
+  }
+  
+  .thirdP {
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  font-size: 4rem;
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+  width: 100%;
+}
+
+.projectsDescriptions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.techTitle {
+  display: flex;
+  align-items: center;  
+  width: fit-content;
+  margin-left: 10%;
+  width: 80%;
+  
+}
+.techSideLine {
+ content: "";
+ width: 55rem;
+ height: .1rem;
+ background-color: white;
+ margin-left: 10%;
+}
+
+.techDescriptions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 15%;
+  height: 90vh;
+}
+.techDescriptions h1 {
+  width: 80%;
+  margin: auto;
+}
+
+.techTitleNImgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hardSkills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  font-size: small;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.hardSkills li {
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items:center;
+}
+
+.hardSkills img {
+  width: 10rem;
+  transform: scale(0.9);
+}
+.hardSkills img:hover {
+  transform: scale(1);
+  transition: ease-in 0.2s;
+}
+
+.gitIcon{
+margin-top: 30%;
+}
+
+.projectTitleNImgs {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  color: white;
+  width: 80%;
+  height: fit-content;
+  padding: 5%;
+  flex-direction: row;
+}
+
+.proj-img {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(2, 1, 1, 0.22) 0px 15px 12px;
+  width: 50%;
+} 
+
+.projectTitleNImgs a {
+  color: white;
+  margin-right: 10%;
+}
+
+.projectDescrip {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.projDescripLeft, .projDescripRight {
+  width: 50%;
+  padding-left: 5%;
+}
+
+.proj-title {
+  color:#63EDD2;
+  text-align: center;
+  font-size: large;
+}
+
+.proj-text {
+  text-align: justify;
+}
+
+#tecnologies {
+  transition: ease-in 5s;
+}
+
+.repoLink, .testLink {
+  padding: 3%;
+}
+
+.repoLink:hover, .testLink:hover {
+  box-shadow: rgba(253, 253, 253, 0.3) 0px 7px 13px -3px, rgba(255, 255, 255, 0.2) 0px -3px 0px inset;
+  border-radius: 5%;
+}
+
+.contactContainer {
+  text-align: center;
+  color: white;
+}
+
+.contactContainer li {
+  text-decoration: none;
+  list-style: none;
+  font-size: larger;
+}
+
+.contactContainer a {
+  color: white;
+
+}
