@@ -16,7 +16,7 @@ export default class About extends Component {
             fullstack na <span className='span'>Trybe</span>.<br/><br/>
             Como não tive contato com a área de programação durante minha trajetória de vida, não me havia passado pela
             cabeça adentrar nesse mundo nos últimos anos, até que em março de 2022, decidi buscar um pouco mais sobre a
-            área após um relato de um amigo. Desde então, estou apaixonado por programação e quero que essa seja minha prajetória.<br/><br/>
+            área após um relato de um amigo. Desde então, estou apaixonado por programação e quero que essa seja minha trajetória.<br/><br/>
            Meu foco atual é o desenvolvimento web voltado para <span className='span'>front-end</span>.<br/><br/>
         </p>
         </div>

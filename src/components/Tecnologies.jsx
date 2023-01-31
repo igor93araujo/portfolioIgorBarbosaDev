@@ -22,7 +22,7 @@ export default class Tecnologies extends Component {
                 <li>GIT<img src={git} alt="Logo_git" className='gitIcon'/></li>
                 <li>HTML 5<img src={html} alt="Logo_html"/></li>
                 <li>CSS<img src={css} alt='cssLogo'/></li>
-                <li>JavaScrip<img src={js} alt="javascript_logo"/></li>
+                <li>JavaScript<img src={js} alt="javascript_logo"/></li>
                 <li>React<img src={react} alt="reactLogo"/></li>
                 <li>React<img src={jest} alt="reactLogo"/></li>
                 <li>RTL<img src={rtl} alt="rtlLogo"/></li>
