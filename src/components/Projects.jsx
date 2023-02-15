@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import NetflixCLone from '../Gifs/netflixCloneGif.gif';
 import TrybeTunes from '../Gifs/TrybeTunesIgor.gif';
 import Lanchonete from '../Gifs/lanchonete.gif';
-import RTL from '../images/RTL.png'
+import trivia from '../Gifs/trivia.gif';
+import tribeWallet from '../Gifs/trybeWallet.gif';
 
 export default class Projects extends Component {
   render() {
@@ -11,6 +12,51 @@ export default class Projects extends Component {
       <div className='techTitle'>
       <h1>Projetos </h1>
       <div className='techSideLine'></div>
+      </div>
+      <div className='projectTitleNImgs'>
+          <img src={trivia} alt="gitImageLanchonete" className='proj-img' />
+          <div className='projectDescrip'>
+            <div className='projDescripLeft'>
+          <p className='proj-title'>Trivia Game</p>
+          <p className='proj-text'>Aplicação desenvolvida em um time de 5 integrantes. É um jogo que tem como objetivo desafiar o usuário a responder 5 perguntas de conhecimentos gerais, podendo ser de múltipla escolha ou verdadeiro/falso. Ao final, o usuário recebe um feedback dos acertos e sua pontuação, pode reiniciar um jogo ou ver o ranking com as maiores pontuações ordenadas da maior para a menor.</p>
+          </div>
+          <div className='projDescripRight'>
+          <p>Skills envolvidas:</p>
+          <ul>
+            <li>Trabalho em equipe</li>
+            <li>Gestão do tempo</li>
+            <li>Comunicação</li>
+            <li>Scrum e Kanban</li>
+            <li>React Redux</li>
+            <li>API Request</li>
+            <li>Media query</li>
+          </ul>
+          <a href='https://lnkd.in/dNVfFiVe' className='repoLink'>Respositório</a>
+          <a href='https://lnkd.in/d2kNC4H8' className='testLink'>Teste aqui</a>
+          </div>
+          </div>
+      </div>
+      <div className='projectTitleNImgs'>
+          <img src={tribeWallet} alt="gitImageLanchonete" className='proj-img' />
+          <div className='projectDescrip'>
+            <div className='projDescripLeft'>
+          <p className='proj-title'>Trybe Wallet</p>
+          <p className='proj-text'>Nesse projeto criamos uma aplicação que simula uma carteira de despesas onde podemos adicioná-las, editá-las e excluí-las, havendo também a conversão da despesa para a moeda real caso o usuário deseje adicionar em outras moedas, oriundas de uma API livre.</p>
+          </div>
+          <div className='projDescripRight'>
+          <p>Skills envolvidas:</p>
+          <ul>
+            <li>Gestão do tempo</li>
+            <li>Scrum e Kanban</li>
+            <li>JavaScript</li>
+            <li>React Redux</li>
+            <li>API Request</li>
+            <li>Utilização da biblioteca <a href='https://react-icons.github.io/react-icons'>ReactIcons</a></li>
+          </ul>
+          <a href='https://lnkd.in/dNVfFiVe' className='repoLink'>Respositório</a>
+          <a href='https://lnkd.in/d2kNC4H8' className='testLink'>Teste aqui</a>
+          </div>
+          </div>
       </div>
       <div className='projectTitleNImgs'>
           <img src={Lanchonete} alt="gitImageLanchonete" className='proj-img' />
@@ -75,26 +121,6 @@ export default class Projects extends Component {
           </ul>
           <a href='https://github.com/igor93araujo/trybetunes-project' className='repoLink'>Respositório</a>
           <a href='https://trybetunes-project-seven.vercel.app/' className='testLink'>Teste aqui</a>
-          </div>
-          </div>
-      </div>
-      <div className='projectTitleNImgs'>
-          <img src={RTL} alt="trybetunesimage" className='proj-img' />
-          <div className='projectDescrip'>
-            <div className='projDescripLeft'>
-          <p className='proj-title'>RTL em aplicação Pokedex</p>
-          <p className='proj-text'>A aplicação contém uma implementação completa de todos os requisitos da Pokédex e o objetivo foi escrever testes que garantiam a corretude do mesmo.</p>
-          </div>
-          <div className='projDescripRight'>
-          <p>Tecnologias abordadas:</p>
-          <ul>
-            <li>React</li>
-            <li>Seletores (queries) da React-Testing-Library</li>
-            <li>Simulação de eventos</li>
-            <li>Teste de fluxos lógicos assíncronos com a React-Testing-Library</li>
-            <li>API Request</li>
-          </ul>
-          <a href='https://github.com/igor93araujo/Pokedex-React-Testing-Library' className='repoLink'>Respositório</a>
           </div>
           </div>
       </div>
