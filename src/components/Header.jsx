@@ -6,6 +6,8 @@ import {BsFillMoonFill, BsSun} from 'react-icons/bs'
 import { SetTheme } from '../redux/actions';
 import { connect } from 'react-redux';
 
+import { slide as Menu } from 'react-burger-menu'
+
 class Header extends Component {
 
   handleTheme = () => {
@@ -23,12 +25,8 @@ class Header extends Component {
               <MdWorkspacesOutline className='logoIcon'/>
             </div>
             <div>
+              <Menu elastic width={ 180 } height={ 350 } >
               <ul className='header-tags'>
-{/*               {
-              theme === 'dark' ? 
-              <p className='hoverMessage'>Você tem certeza disso? Então coloque óculos de proteção! </p>
-             : <p className='hoverMessage'>Eu avisei!</p>
-            } */}
                 {
                   theme === 'light' ?
                   <BsFillMoonFill 
@@ -63,8 +61,8 @@ class Header extends Component {
                   </li>
                   <li>
                   </li>
-                
               </ul>
+             </Menu>
             </div>
 
       </header>

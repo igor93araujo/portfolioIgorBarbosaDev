@@ -1,13 +1,18 @@
 body {
-  background-color: #0a192f;
+  background-color: rgb(11, 15, 78);
   width: 100vw;
-  overflow-x: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow-x:hidden;
 }
+
 .fixed-contacts {
   position: fixed;
   bottom: 0;
   left: -1%;
 }
+
 .social-contact li {
   list-style: none;
   margin-bottom: 20%;  
@@ -31,20 +36,13 @@ body {
 }
 
 header {
-  position:fixed;
   display: flex;
   justify-content: space-between;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  right: 0;
   align-items: center;
-  padding: 0 30px 0 30px;
   transition: all ease 0.5s;
   height: 4rem;
   font-family: 'Inknut Antiqua', serif;
   text-decoration: none;
-  background-color: #0a192f;
   box-shadow: rgba(141, 141, 141, 0.1) 0px 20px 25px -5px, rgba(164, 164, 164, 0.04) 0px 10px 10px -5px;
 }
 
@@ -110,9 +108,6 @@ header {
   color:#000000;
 }
 
-.darkMode {
-  background-color: #0a192f;
-}
 
 .darkMode a {
   color: white;
@@ -224,7 +219,6 @@ p, h1{
 .techTitle {
   display: flex;
   align-items: center;  
-  width: fit-content;
   margin-left: 10%;
   width: 80%;
   
@@ -280,6 +274,7 @@ p, h1{
   width: 10rem;
   transform: scale(0.9);
 }
+
 .hardSkills img:hover {
   transform: scale(1);
   transition: ease-in 0.2s;
@@ -358,5 +353,184 @@ margin-top: 30%;
 
 .contactContainer a {
   color: white;
+}
 
+@media screen and (max-width:800px) {
+  .menu-hamburguer {
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    margin-right: 20%;
+  }
+
+  .line1,
+  .line2,
+  .line3 {
+    width: 2rem;
+    margin-bottom: 20%;
+    border: 1px solid white;
+  }
+
+/*   .header-tags {
+    display: none;
+  } */
+
+  header {
+    padding: 0px 50px 0px 50px;
+  }
+
+  .darkMode {
+    width: 120vw;
+  }
+
+  #presentation {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .presentation-text {
+    padding-left: 5%;
+    padding-right: 2%;
+    width: 90%;
+  }
+
+  .thirdP {
+    font-size: 30px;
+  }
+
+  .forthP {
+    width: 80%;
+  }
+
+  #fullDescription {
+    flex-direction: column;
+    margin-top: 0;
+    width: 80%;
+    height: auto;
+  }
+
+  #foto-igor {
+    visibility: hidden;
+  }
+
+  .textDescription {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30%;
+  }
+
+  .aboutSideLine {
+    visibility: hidden;
+  }
+
+  .techTitleNImgs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hardSkills {
+    margin-left: 0;
+  }
+
+
+.hardSkills img {
+  width: 5rem;
+}
+
+
+  .techDescriptions {
+    width: 80%;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+  }
+  .techSideLine {
+    visibility: hidden;
+  }
+
+  .techTitle {
+    margin-left: 0;
+  }
+
+  .projectTitleNImgs {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+
+  .proj-text,
+  .projDescripRight p,
+  .projectDescrip ul li {
+    display:none;
+  }
+
+  .projDescripRight {
+    text-align: center;
+    width: 100%;
+  }
+
+  .projDescripRight a {
+    padding-top: 10%
+  }
+
+  .proj-title {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .proj-img {
+    width: 90%;
+  }
+  .repoLink, 
+  .testLink {
+    display: inline;
+  }
+
+  .projDescripLeft {
+    width: auto;
+    padding-left: 0;
+  }
+
+  .projectDescrip {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: fit-content;
+  }
+
+  h1 {
+    font-size:18px;
+  }
+
+  #contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .contactContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .contactContainer p {
+    width: 80%;
+    margin: auto;
+  }
+
+  .fixed-contacts {
+    display: none;
+  }
 }
