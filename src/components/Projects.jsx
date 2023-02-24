@@ -28,8 +28,8 @@ export default class Projects extends Component {
             <li>API Request</li>
             <li>Media query</li>
           </ul>
-          <a href='https://lnkd.in/dNVfFiVe' className='repoLink'>Respositório</a>
-          <a href='https://lnkd.in/d2kNC4H8' className='testLink'>Teste aqui</a>
+          <a href='https://github.com/igor93araujo/TriviaGame' className='repoLink'>Respositório</a>
+          <a href='https://trivia-game-taupe.vercel.app/' className='testLink'>Teste aqui</a>
           </div>
           </div>
       </div>
