@@ -87,6 +87,13 @@ header {
   width: fit-content;
   padding:0 1rem;
   border-radius: 1rem;
+  transition: left 0.5s;
+}
+
+.listDesk {
+  width: fit-content;
+  color: white;
+
 }
 
 .listItems {
@@ -94,7 +101,16 @@ header {
   list-style: none;
 }
 
-.listItems a {
+.listItemsDesk {
+  display: flex;
+  list-style: none;
+}
+
+.listItemsDesk li {
+  margin-right: 2%;
+}
+
+.listItems a, .listItemsDesk a {
   text-decoration: none;
 }
 
@@ -113,10 +129,10 @@ header {
 }
 
 .menu.menuOpen {
+  display: flex;
+  flex-direction: row-reverse;
   transition: all ease 0.8s;
   width: 100%;
-  padding-right: 50%;
-  height: 40rem;
 }
 
 .menu.menuClose {
@@ -124,10 +140,11 @@ header {
   width: 0px;
 }
 .theme-icon {
-  width: 4rem;
+  width: 6rem;
   height: 2rem;
   color: white;
   margin-top: 1%;
+  margin-right: 5%;
   cursor: pointer;
 }
 
@@ -247,8 +264,8 @@ p, h1{
 
 .textDescription h1,
 .techDescriptions h1,
-.projectsDescriptions h1
-.contactContainer h1 {
+.contactContainer h1,
+.fullWindow h1 {
   font-size: xx-large;
   border-bottom: 1px solid white;
   width: fit-content;
@@ -298,12 +315,22 @@ p, h1{
   margin-bottom: -1rem;
   width: 100%;
 }
-
+/* 
 .projectsDescriptions {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  font-family: 'Inknut Antiqua', serif;
+  width: 100vw;
+  overflow-x: scroll;
+} */
+
+.proj-bts {
+  width: 100%;
+  display: inline;
+  text-align: center;
 }
+
 
 .techTitle {
   display: flex;
@@ -330,8 +357,6 @@ p, h1{
   height: 100vh;
 }
 
-
-
 .techTitleNImgs {
   display: flex;
   justify-content: center;
@@ -345,8 +370,7 @@ p, h1{
   justify-content: center;
   gap: 1rem;
   font-size: small;
-  width: 80%;
-  margin-left: 10%;
+  width: 100%;
 }
 
 .hardSkills li {
@@ -370,38 +394,20 @@ p, h1{
 margin-top: 30%;
 }
 
-.projectTitleNImgs {
-  background-color: rgba(0, 0, 0, 0.4);
+/* .projectTitleNImgs {
   display: flex;
+  align-items: center;
   color: white;
-  width: 80%;
-  height: fit-content;
-  padding: 5%;
-  flex-direction: row;
-}
+  width: 100%;
+  flex-direction: column;
+  height: 100cap;
+} */
 
-.proj-img {
+/* .projectTitleNImgs img{
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(2, 1, 1, 0.22) 0px 15px 12px;
-  width: 50%;
-  height: 40%;
-} 
+  width: 550px;
+}  */
 
-.projectTitleNImgs a {
-  color: white;
-  margin-right: 10%;
-}
-
-.projectDescrip {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  font-family: 'Inknut Antiqua', serif;
-}
-
-.projDescripLeft, .projDescripRight {
-  width: 50%;
-  padding-left: 5%;
-}
 
 .proj-title {
   color:#63EDD2;
@@ -409,9 +415,6 @@ margin-top: 30%;
   font-size: large;
 }
 
-.proj-text {
-  text-align: justify;
-}
 
 #tecnologies {
   transition: ease-in 5s;
@@ -466,37 +469,43 @@ margin-top: 30%;
   }
 
   .presentation-text {
-    padding-left: 5%;
-    padding-right: 2%;
-    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 
   .thirdP {
-    font-size: 30px;
+    font-size: xx-large;
   }
 
   .forthP {
-    width: 80%;
+    width: 90%;
+    padding-top: 10%;
   }
 
   #fullDescription {
     flex-direction: column;
     margin-top: 0;
-    width: 80%;
+    width: 90%;
     height: auto;
   }
 
   #foto-igor {
     visibility: hidden;
   }
+  #about{
+    display: flex;
+    justify-content: center;
+  }
 
   .textDescription {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: 30%;
+    width: 100%;
+  }
+
+  .textDescription h1, 
+  .techDescriptions h1{
+    font-size: x-large;
   }
 
   .aboutSideLine {
@@ -511,7 +520,8 @@ margin-top: 30%;
   }
 
   .hardSkills {
-    margin-left: 0;
+    margin-left: 0%;
+    padding-left: 0;
   }
 
 
@@ -521,10 +531,8 @@ margin-top: 30%;
 
 
   .techDescriptions {
-    width: 80%;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
+    width: 90%;
+    height: 100vh;
   }
   .techSideLine {
     visibility: hidden;
@@ -534,17 +542,17 @@ margin-top: 30%;
     margin-left: 0;
   }
 
-  .projectTitleNImgs {
+/*   .projectTitleNImgs {
     justify-content: center;
     align-items: center;
     flex-direction: column-reverse;
-  }
+  } */
 
-  .proj-text,
+/*   .proj-text,
   .projDescripRight p,
   .projectDescrip ul li {
     display:none;
-  }
+  } */
 
   .projDescripRight {
     text-align: center;
@@ -559,10 +567,6 @@ margin-top: 30%;
     width: fit-content;
     height: fit-content;
   }
-
-  .proj-img {
-    width: 90%;
-  }
   .repoLink, 
   .testLink {
     display: inline;
@@ -573,17 +577,13 @@ margin-top: 30%;
     padding-left: 0;
   }
 
-  .projectDescrip {
+/*   .projectDescrip {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 90%;
     height: fit-content;
-  }
-
-  h1 {
-    font-size:18px;
-  }
+  } */
 
   #contacts {
     display: flex;

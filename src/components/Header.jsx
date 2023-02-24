@@ -9,15 +9,17 @@ import { RxCross1 } from 'react-icons/rx';
 function Header(props){
 
   // render() {
-    const {theme, handleTheme, active, toggleMode } = props;
+    const {theme, handleTheme, active, toggleMode, mobile} = props;
     return (
       <header>
             <div className='logoHeader'>
               <MdWorkspacesOutline className='logoIcon'/>
             </div>
             <div className={ active ? 'menu menuOpen' : 'menu menuClose'}>
-              <div className='list'>
-                <ul className= 'listItems'>
+              <div className = {
+                mobile ? 'list' : 'listDesk'
+              }>
+                <ul className = { mobile? 'listItems' : 'listItemsDesk'}>
                   {
                     theme === 'light' ?
                     <BsFillMoonFill 
@@ -55,12 +57,15 @@ function Header(props){
                 </ul>
               </div>
               </div>
+              {
+              mobile ? 
             <div className={ theme === 'dark'? 'darkIcon' : 'lightIcon'} onClick={ toggleMode }>
               {
                 active? 
                 <RxCross1 className='hamburguer hamburguerIcon'/> : 
                 <GiHamburgerMenu className='hamburguer hamburguerIcon'/>}
-            </div>
+            </div> : ''
+          }
       </header>
     )
   }

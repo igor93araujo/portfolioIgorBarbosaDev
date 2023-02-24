@@ -1,4 +1,4 @@
-import {React, useState} from 'react';
+import {React, useEffect, useState} from 'react';
 import './App.css';
 import Header from '../src/components/Header';
 import Presentation from './components/Presentation';
@@ -11,7 +11,8 @@ import Contacts from './components/Contacts';
 function App(){
 
   const [theme, setTheme ] = useState('dark');
-  const [active, setMode ] = useState(false)
+  const [active, setMode ] = useState(false);
+  const [mobile, setMobile] = useState(false);
 
   const handleTheme = () => {
     if (theme === 'dark') {
@@ -25,7 +26,18 @@ function App(){
     setMode(!active)
   }
 
-  
+  useEffect(() => {
+
+    window.addEventListener('resize', () => {
+      if( window.innerWidth < 800) {
+        setMobile(true)
+        setMode(false)
+      } else {
+        setMobile(false)
+        setMode(true)
+      }
+    })
+  },[])
 
   return (
     <div className={theme === 'light' ? 'lightMode' : 'darkMode'}>
@@ -34,6 +46,7 @@ function App(){
         theme={ theme }
         active = { active}
         toggleMode = { toggleMode }
+        mobile = { mobile }
       />
       <Presentation />
       <About />

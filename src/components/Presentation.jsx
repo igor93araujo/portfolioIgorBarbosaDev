@@ -18,10 +18,10 @@ export default class Presentation extends Component {
             iteration="infinite"
             fillMode="both"
             >
-            <p className='thirdP'>Igor Barbosa.</p>
+            <p className='thirdP'>Igor Barbosa,</p>
           </MovingComponent>
            <p className='forthP'>
-           Sou um veterinário em transição de carreira indo com tudo para o mundo de desenvolvimento web.<br/>
+           um veterinário em transição de carreira indo com tudo para o mundo de desenvolvimento web.<br/><br/>
            Sou aluno da Trybe e atualmente estou focando em front-end.</p>
       </div>
      </section>

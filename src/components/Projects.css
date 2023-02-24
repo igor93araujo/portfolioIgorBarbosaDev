@@ -1,0 +1,56 @@
+.fullWindow {
+  width: 100%;
+  max-width: 90%;
+  text-align: center;
+}
+
+.fullWindow h1 {
+  margin: auto;
+}
+
+.inner {
+  display: flex;
+}
+
+.projeto {
+  min-height: 70%;
+  min-width: 70%;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projeto img {
+  width: 100%;
+  height: 90%;
+  border-radius: 12px;
+  pointer-events: none;
+
+}
+
+.carrosel {
+  cursor: grab;
+  overflow: hidden;
+}
+
+.proj-bts {
+  font-family: 'Inknut Antiqua', serif;
+}
+
+@media screen and (max-width:768px){
+
+  .projeto {
+    min-width: 80%;
+  }
+  
+  .projeto img {
+    width: 90%;
+    height: 50%;
+  }
+
+  .proj-bts {
+   font-size: smaller;
+   width: 100%;
+  }
+}
