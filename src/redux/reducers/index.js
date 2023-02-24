@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 
 const INITIAL_STATE = {
   theme: 'white',
+  menu: false
   };
 
   const themeReducer = (state = INITIAL_STATE, action) => {
@@ -11,6 +12,11 @@ const INITIAL_STATE = {
           ...state,
           theme: state.theme === "dark" ? "light" : "dark"
           }
+      case "MENU_TOGGLE":
+        return {
+          state,
+          menu: true,
+        }
           default:
             return state;
     }

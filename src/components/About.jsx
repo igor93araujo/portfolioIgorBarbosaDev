@@ -9,7 +9,6 @@ export default class About extends Component {
       <div id="fullDescription">
         <div className='textDescription' >
         <h1>Sobre mim</h1>
-        <div className='aboutSideLine' ></div>
             <p> Oi! Boas vindas! <br/>
             Me chamo Igor Barbosa de Araújo, tenho 30 anos, moro em Contagem, MG. Sou graduado como
             médico veterinário desde dezembro de 2021, porém estou em <span className='span'>transição de carreira</span>, estudando desenvolvimento web

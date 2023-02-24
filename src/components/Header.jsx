@@ -1,78 +1,69 @@
 /* eslint-disable import/no-anonymous-default-export */
-import {React, Component} from 'react'
+import {React} from 'react'
 import '../App.css';
 import { MdWorkspacesOutline } from 'react-icons/md';
 import {BsFillMoonFill, BsSun} from 'react-icons/bs'
-import { SetTheme } from '../redux/actions';
-import { connect } from 'react-redux';
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { RxCross1 } from 'react-icons/rx';
 
-import { slide as Menu } from 'react-burger-menu'
+function Header(props){
 
-class Header extends Component {
-
-  handleTheme = () => {
-    const { dispatch } = this.props;
-    dispatch(SetTheme(this.state));
-
-  }
-
-  render() {
-
-    const {theme} = this.props;
+  // render() {
+    const {theme, handleTheme, active, toggleMode } = props;
     return (
       <header>
-            <div>
+            <div className='logoHeader'>
               <MdWorkspacesOutline className='logoIcon'/>
             </div>
-            <div>
-              <Menu elastic width={ 180 } height={ 350 } >
-              <ul className='header-tags'>
-                {
-                  theme === 'light' ?
-                  <BsFillMoonFill 
-                  onClick={ this.handleTheme}
-                  className='theme-icon'
-                  />
-                  :
-                  <BsSun
-                  onClick={ this.handleTheme}
-                  className='theme-icon'
-                  />
-                }
-                <li>
-                  <a href="#about">
-                    Sobre
-                  </a>
-                  </li>
+            <div className={ active ? 'menu menuOpen' : 'menu menuClose'}>
+              <div className='list'>
+                <ul className= 'listItems'>
+                  {
+                    theme === 'light' ?
+                    <BsFillMoonFill 
+                    onClick={handleTheme}
+                    className='theme-icon'
+                    />
+                    :
+                    <BsSun
+                    onClick={ handleTheme}
+                    className='theme-icon'
+                    />
+                  }
                   <li>
-                  <a href="#tecnologies">
-                    Tecnologias
-                  </a>
-                  </li>
-                  <li>
-                  <a href="#projects">
-                  Projetos
-                  </a>
-                  </li>
-                  <li>
-                  <a href="#contacts">
-                    Contato
-                  </a>
-                  </li>
-                  <li>
-                  </li>
-              </ul>
-             </Menu>
+                    <a href="#about">
+                      Sobre
+                    </a>
+                    </li>
+                    <li>
+                    <a href="#tecnologies">
+                      Tecnologias
+                    </a>
+                    </li>
+                    <li>
+                    <a href="#projects">
+                    Projetos
+                    </a>
+                    </li>
+                    <li>
+                    <a href="#contacts">
+                      Contato
+                    </a>
+                    </li>
+                    <li>
+                    </li>
+                </ul>
+              </div>
+              </div>
+            <div className={ theme === 'dark'? 'darkIcon' : 'lightIcon'} onClick={ toggleMode }>
+              {
+                active? 
+                <RxCross1 className='hamburguer hamburguerIcon'/> : 
+                <GiHamburgerMenu className='hamburguer hamburguerIcon'/>}
             </div>
-
       </header>
     )
   }
-}
 
-const mapStateToProps = ({ themeReducer: { theme } }) => ({
-  theme,
-});
-
-export default connect(mapStateToProps)(Header);
+export default Header;
 

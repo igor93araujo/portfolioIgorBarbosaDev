@@ -9,10 +9,7 @@ export default class Projects extends Component {
   render() {
     return (
       <div className='projectsDescriptions' id='projects'>
-      <div className='techTitle'>
       <h1>Projetos </h1>
-      <div className='techSideLine'></div>
-      </div>
       <div className='projectTitleNImgs'>
           <img src={trivia} alt="gitImageLanchonete" className='proj-img' />
           <div className='projectDescrip'>

@@ -1,4 +1,4 @@
-import {React, Component} from 'react';
+import {React, useState} from 'react';
 import './App.css';
 import Header from '../src/components/Header';
 import Presentation from './components/Presentation';
@@ -7,15 +7,34 @@ import {BsGithub, BsLinkedin, BsInstagram} from 'react-icons/bs';
 import Tecnologies from './components/Tecnologies';
 import Projects from './components/Projects';
 import Contacts from './components/Contacts';
-import { connect } from 'react-redux';
 
-class App extends Component {
+function App(){
 
-  render() {
-  const {theme} = this.props;
+  const [theme, setTheme ] = useState('dark');
+  const [active, setMode ] = useState(false)
+
+  const handleTheme = () => {
+    if (theme === 'dark') {
+      setTheme('light')
+    } else {
+      setTheme('dark')
+    }
+  }
+
+  const toggleMode = () => {
+    setMode(!active)
+  }
+
+  
+
   return (
     <div className={theme === 'light' ? 'lightMode' : 'darkMode'}>
-      <Header/>
+      <Header
+        handleTheme = {handleTheme}
+        theme={ theme }
+        active = { active}
+        toggleMode = { toggleMode }
+      />
       <Presentation />
       <About />
       <Tecnologies />
@@ -43,12 +62,6 @@ class App extends Component {
     </div>
   );
   }
-}
 
-
-const mapStateToProps = ({ themeReducer: { theme } }) => ({
-  theme,
-});
-
-export default connect(mapStateToProps)(App);
+export default App;
 

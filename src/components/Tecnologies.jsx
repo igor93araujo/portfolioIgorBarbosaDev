@@ -12,10 +12,7 @@ export default class Tecnologies extends Component {
   render() {
     return (
       <div className='techDescriptions' id="tecnologies">
-      <div className='techTitle'>
       <h1>Tecnologias</h1>
-      <div className='techSideLine'></div>
-      </div>
       <div className='techTitleNImgs'>
           <p> Aqui há algumas tecnologias que já trabalhei <br/>
           <ul className='hardSkills'>

@@ -1,12 +1,3 @@
-body {
-  background-color: rgb(11, 15, 78);
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  overflow-x:hidden;
-}
-
 .fixed-contacts {
   position: fixed;
   bottom: 0;
@@ -35,6 +26,14 @@ body {
   background-color: white
 }
 
+.lightMode .contact-line {
+  background-color: black;
+}
+
+.logoHeader {
+  padding-left: 5%;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -44,8 +43,86 @@ header {
   font-family: 'Inknut Antiqua', serif;
   text-decoration: none;
   box-shadow: rgba(141, 141, 141, 0.1) 0px 20px 25px -5px, rgba(164, 164, 164, 0.04) 0px 10px 10px -5px;
+  width: 100%;
+  position: fixed;
+  top: 0;
 }
 
+.darkIcon {
+  color: white;
+  transform: scale(150%);
+  position: absolute;
+  z-index: 4;
+  width: fit-content;
+  height: 44px;
+  cursor: pointer;
+  right: 4%;
+  top: 30%;
+}
+
+.lightIcon {
+  color: white;
+  position: absolute;
+  z-index: 4;
+  width: fit-content;
+  height: 44px;
+  cursor: pointer;
+  right: 4%;
+  top: 30%;
+  transform: scale(150%);
+}
+
+.list {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction:column;
+  font-size: 1.2rem;
+  top: 6%;
+  right: 2%;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding:0 1rem;
+  border-radius: 1rem;
+}
+
+.listItems {
+  padding: 0;
+  list-style: none;
+}
+
+.listItems a {
+  text-decoration: none;
+}
+
+.lightMode .listItems a {
+  color: white;
+}
+
+
+.listItems a:hover {
+  text-decoration: underline;
+}
+
+
+.header-tags li {
+  cursor: pointer;
+}
+
+.menu.menuOpen {
+  transition: all ease 0.8s;
+  width: 100%;
+  padding-right: 50%;
+  height: 40rem;
+}
+
+.menu.menuClose {
+  display: none;
+  width: 0px;
+}
 .theme-icon {
   width: 4rem;
   height: 2rem;
@@ -54,9 +131,6 @@ header {
   cursor: pointer;
 }
 
-.hoverMessage {
-  display: none;
-}
 .theme-icon:hover + .hoverMessage {
   display: block;
   color: white;
@@ -64,15 +138,35 @@ header {
 
 .lightMode {
   background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #000000;
 }
 
 .lightMode header {
   background-color:#164910;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  color: black;
+}
+
+.darkMode {
+  background-color:#0a0126;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.darkMode header {
+  background-color:#0a0126;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  color: black;
 }
 
 .lightMode header li a {
- color:#d3d8d1;
+ color:#000000;
 }
 
 .lightMode a,
@@ -90,10 +184,11 @@ header {
   color: #1c1b1b;
 }
 
-.lightMode .aboutSideLine,
-.lightMode .techSideLine,
-.lightMode .contact-line {
-  background-color: #1d1b1b;
+.darkMode {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .lightMode .firstP,
@@ -120,49 +215,43 @@ header {
   height: 200%;
 }
 
-.header-tags {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  list-style: none;
-}
-
-.header-tags a:hover {
-  border-bottom: 1px solid rgb(255, 255, 255);
-  border-radius:5px;
-}
-
 #presentation {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
+  height: 90vh;
   gap: 30%;
+  width: 100%;
 }
 
 #foto-igor {
-  width: 40%;
+  width: 50%;
   height: 80%;
   cursor: pointer;
   filter: contrast(120%);
-}
-
-.presentation-text {
-  width: 50%;
-  margin-left: 15%;
 }
 
 #fullDescription {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin-top: 5%;
+  height: 100vh;  
+  width: 80vw;
 }
 
 p, h1{
   font-family: 'Inknut Antiqua', serif;
   color: white;
+}
+
+.textDescription h1,
+.techDescriptions h1,
+.projectsDescriptions h1
+.contactContainer h1 {
+  font-size: xx-large;
+  border-bottom: 1px solid white;
+  width: fit-content;
 }
 
 .textDescription {
@@ -232,19 +321,16 @@ p, h1{
 }
 
 .techDescriptions {
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  margin: auto;
-  margin-top: 15%;
-  height: 90vh;
+  width: 100%;  
+  height: 100vh;
 }
-.techDescriptions h1 {
-  width: 80%;
-  margin: auto;
-}
+
+
 
 .techTitleNImgs {
   display: flex;
@@ -341,46 +427,34 @@ margin-top: 30%;
 }
 
 .contactContainer {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: white;
+  align-items: center;
 }
 
 .contactContainer li {
   text-decoration: none;
   list-style: none;
   font-size: larger;
+  text-align: center;
 }
 
 .contactContainer a {
   color: white;
 }
 
+.contactContainer h1 {
+
+  width: fit-content;
+  border-bottom: 1px solid white;
+}
+
 @media screen and (max-width:800px) {
-  .menu-hamburguer {
-    display: flex;
-    flex-direction: column;
-    z-index: 999;
-    margin-right: 20%;
-  }
-
-  .line1,
-  .line2,
-  .line3 {
-    width: 2rem;
-    margin-bottom: 20%;
-    border: 1px solid white;
-  }
-
-/*   .header-tags {
-    display: none;
-  } */
 
   header {
-    padding: 0px 50px 0px 50px;
-  }
-
-  .darkMode {
-    width: 120vw;
+    justify-content: space-between;
   }
 
   #presentation {

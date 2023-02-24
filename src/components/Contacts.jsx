@@ -7,12 +7,8 @@ import '../App.css';
 export default class Contacts extends Component {
   render() {
     return (
-      <div id='contacts'>
-      <div className='contactTitle'>
+      <div className='contactContainer' id='contacts' >
       <h1>Contato</h1>
-      <div className='techSideLine'></div>
-      </div>
-      <div className='contactContainer' >
           <p>Se tiver gostado do conteúdo, pode falar comigo por aqui:</p>
           <ul>
             <li>
@@ -39,7 +35,6 @@ export default class Contacts extends Component {
           </li>
           </ul>
           </div>
-      </div>
     )
   }
 }
