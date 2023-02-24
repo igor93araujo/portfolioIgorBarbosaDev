@@ -10,7 +10,7 @@ export default class Contacts extends Component {
       <div className='contactContainer' id='contacts' >
       <h1>Contato</h1>
           <p>Se tiver gostado do conteúdo, pode falar comigo por aqui:</p>
-          <ul>
+          <ul className='contactsLinks'>
             <li>
               <AiOutlinePhone /> / 
               <a href="https://api.whatsapp.com/send?phone=31994220001">

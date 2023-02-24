@@ -387,21 +387,6 @@ p, h1{
 margin-top: 30%;
 }
 
-/* .projectTitleNImgs {
-  display: flex;
-  align-items: center;
-  color: white;
-  width: 100%;
-  flex-direction: column;
-  height: 100cap;
-} */
-
-/* .projectTitleNImgs img{
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(2, 1, 1, 0.22) 0px 15px 12px;
-  width: 550px;
-}  */
-
-
 .proj-title {
   color:#63EDD2;
   text-align: center;
@@ -445,6 +430,11 @@ margin-top: 30%;
 
   width: fit-content;
   border-bottom: 1px solid white;
+}
+
+.contactsLinks {
+  text-align: center;
+  padding: 0;
 }
 
 @media screen and (max-width:800px) {
@@ -535,18 +525,6 @@ margin-top: 30%;
     margin-left: 0;
   }
 
-/*   .projectTitleNImgs {
-    justify-content: center;
-    align-items: center;
-    flex-direction: column-reverse;
-  } */
-
-/*   .proj-text,
-  .projDescripRight p,
-  .projectDescrip ul li {
-    display:none;
-  } */
-
   .projDescripRight {
     text-align: center;
     width: 100%;
@@ -570,14 +548,6 @@ margin-top: 30%;
     padding-left: 0;
   }
 
-/*   .projectDescrip {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: fit-content;
-  } */
-
   #contacts {
     display: flex;
     flex-direction: column;
@@ -593,7 +563,7 @@ margin-top: 30%;
   }
 
   .contactContainer p {
-    width: 80%;
+    width: 90%;
     margin: auto;
   }
 
