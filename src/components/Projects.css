@@ -13,44 +13,54 @@
 }
 
 .projeto {
-  min-height: 70%;
-  min-width: 70%;
-  padding: 14px;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  margin-right: 5%;
+  margin-left: 5%;
   align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+
+.projeto h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.projeto p {
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 .projeto img {
-  width: 100%;
-  height: 90%;
-  border-radius: 12px;
-  pointer-events: none;
-
+  width: 500px;
 }
+
 
 .carrosel {
-  cursor: grab;
-  overflow: hidden;
-}
-
-.proj-bts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: #0a0126;
+  color: white;
   font-family: 'Inknut Antiqua', serif;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
-@media screen and (max-width:768px){
-
-  .projeto {
-    min-width: 80%;
-  }
-  
-  .projeto img {
-    width: 90%;
-    height: 50%;
-  }
-
-  .proj-bts {
-   font-size: smaller;
-   width: 100%;
-  }
+.inner {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #0a0126;
+  color: white;
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 1.5rem;
+  text-align: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }

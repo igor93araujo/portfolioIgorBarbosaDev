@@ -4,8 +4,6 @@ import '../App.css';
 
 import { projList } from '../helper/ProjectsBase';
 
-import { motion } from 'framer-motion';
-
 
 export default function Projects() {
 
@@ -19,14 +17,11 @@ export default function Projects() {
     return (
       <div className='fullWindow'>
       <h1>Projetos</h1>
-      <motion.div ref={carrosel} className='carrosel' id='projects' whileTap={{cursor: 'grabbing'}}>
-        <motion.div className='inner'
-        drag="x"
-        dragConstraints={{ right:0, left: -width}}
-        >
+      <div ref={carrosel} className='carrosel' id='projects'>
+        <div className='inner'>
           {
             projList.map(({name, image, repo, deploy}, index) => (
-            <motion.div className='projeto' key={index}>
+            <div className='projeto' key={index}>
               <p className='proj-title'>{name}</p>
               <img src={image} alt={name} className='proj-img' />
               <div className='proj-bts'>
@@ -35,12 +30,12 @@ export default function Projects() {
                 <a href={deploy}
                 className='testLink'>Teste aqui</a>
               </div>
-            </motion.div>
+            </div>
             ))
           }
 
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
       </div>
     )
   }

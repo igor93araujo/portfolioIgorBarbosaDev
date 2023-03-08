@@ -49,6 +49,16 @@ header {
   z-index: 99999;
 }
 
+.ul {
+  display: flex;
+  list-style: none;
+  margin-right: 5%;
+}
+
+.ul li {
+  margin-right: 2%;
+}
+
 .darkIcon {
   color: white;
   transform: scale(150%);

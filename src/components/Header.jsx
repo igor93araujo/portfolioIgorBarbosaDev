@@ -15,11 +15,9 @@ function Header(props){
             <div className='logoHeader'>
               <MdWorkspacesOutline className='logoIcon'/>
             </div>
-            <div className={ active ? 'menu menuOpen' : 'menu menuClose'}>
-              <div className = {
-                mobile ? 'list' : 'listDesk'
-              }>
-                <ul className = { mobile? 'listItems' : 'listItemsDesk'}>
+            <div>
+              <div>
+                <ul className='ul'>
                   {
                     theme === 'light' ?
                     <BsFillMoonFill 
@@ -57,15 +55,6 @@ function Header(props){
                 </ul>
               </div>
               </div>
-              {
-              mobile ? 
-            <div className={ theme === 'dark'? 'darkIcon' : 'lightIcon'} onClick={ toggleMode }>
-              {
-                active? 
-                <RxCross1 className='hamburguer hamburguerIcon'/> : 
-                <GiHamburgerMenu className='hamburguer hamburguerIcon'/>}
-            </div> : ''
-          }
       </header>
     )
   }
