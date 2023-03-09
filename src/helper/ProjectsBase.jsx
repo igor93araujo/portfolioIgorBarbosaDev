@@ -3,8 +3,15 @@ import TrybeTunes from '../Gifs/TrybeTunesIgor.gif';
 import Lanchonete from '../Gifs/lanchonete.gif';
 import trivia from '../Gifs/trivia.gif';
 import tribeWallet from '../Gifs/trybeWallet.gif';
+import starWars from '../Gifs/StarWarsFIlters.gif';
 
 export const projList = [
+  {
+    name: 'Star Wars Planets Filters',
+    image:starWars,
+    repo:'https://github.com/igor93araujo/StarWarsPlanetsFIlters',
+    deploy:'https://star-wars-planets-filters-nine.vercel.app/'
+  },
   {
   name: 'Trivia',
   image:trivia,
