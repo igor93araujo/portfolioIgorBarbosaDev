@@ -4,8 +4,15 @@ import Lanchonete from '../Gifs/lanchonete.gif';
 import trivia from '../Gifs/trivia.gif';
 import tribeWallet from '../Gifs/trybeWallet.gif';
 import starWars from '../Gifs/StarWarsFIlters.gif';
+import recipesApp from '../Gifs/recipesApp.gif';
 
 export const projList = [
+  {
+    name: 'Recipes App',
+    image:recipesApp,
+    repo:'https://github.com/igor93araujo/RecipesAppProject',
+    deploy:'https://recipes-app-project-ecru.vercel.app/'
+  },
   {
     name: 'Star Wars Planets Filters',
     image:starWars,

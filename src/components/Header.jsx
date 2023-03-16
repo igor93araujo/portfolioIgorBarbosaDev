@@ -1,22 +1,14 @@
 /* eslint-disable import/no-anonymous-default-export */
 import {React} from 'react'
 import '../App.css';
-import { MdWorkspacesOutline } from 'react-icons/md';
 import {BsFillMoonFill, BsSun} from 'react-icons/bs'
-import { GiHamburgerMenu } from 'react-icons/gi'
-import { RxCross1 } from 'react-icons/rx';
 
 function Header(props){
 
   // render() {
-    const {theme, handleTheme, active, toggleMode, mobile} = props;
+    const {theme, handleTheme} = props;
     return (
       <header>
-            <div className='logoHeader'>
-              <MdWorkspacesOutline className='logoIcon'/>
-            </div>
-            <div>
-              <div>
                 <ul className='ul'>
                   {
                     theme === 'light' ?
@@ -53,8 +45,6 @@ function Header(props){
                     <li>
                     </li>
                 </ul>
-              </div>
-              </div>
       </header>
     )
   }

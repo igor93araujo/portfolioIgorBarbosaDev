@@ -21,7 +21,7 @@ export default class Tecnologies extends Component {
                 <li>CSS<img src={css} alt='cssLogo'/></li>
                 <li>JavaScript<img src={js} alt="javascript_logo"/></li>
                 <li>React<img src={react} alt="reactLogo"/></li>
-                <li>React<img src={jest} alt="reactLogo"/></li>
+                <li>Jest<img src={jest} alt="reactLogo"/></li>
                 <li>RTL<img src={rtl} alt="rtlLogo"/></li>
             </ul>
       </p>

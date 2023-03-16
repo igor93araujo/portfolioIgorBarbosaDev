@@ -36,9 +36,8 @@
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  transition: all ease 0.5s;
   height: 4rem;
   font-family: 'Inknut Antiqua', serif;
   text-decoration: none;
@@ -46,6 +45,7 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
+  right: 0;
   z-index: 99999;
 }
 
@@ -194,7 +194,7 @@ header {
 }
 
 .lightMode header li a {
- color:#000000;
+ color:#fffbfb;
 }
 
 .lightMode a,
@@ -403,11 +403,6 @@ margin-top: 30%;
   font-size: large;
 }
 
-
-#tecnologies {
-  transition: ease-in 5s;
-}
-
 .repoLink, .testLink {
   padding: 3%;
 }
@@ -449,8 +444,19 @@ margin-top: 30%;
 
 @media screen and (max-width:800px) {
 
-  header {
-    justify-content: space-between;
+  .theme-icon {
+    width: 60px;
+  }
+ 
+  .ul {
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    width: 100%;
+  }
+
+  header a {
+    font-size: 13px;
   }
 
   #presentation {
@@ -481,7 +487,7 @@ margin-top: 30%;
     flex-direction: column;
     margin-top: 0;
     width: 90%;
-    height: auto;
+    height: fit-content;
   }
 
   #foto-igor {
@@ -518,14 +524,16 @@ margin-top: 30%;
   }
 
 
-.hardSkills img {
-  width: 5rem;
-}
-
+  .hardSkills img {
+    width: 5rem;
+  }
 
   .techDescriptions {
     width: 90%;
     height: 100vh;
+    justify-content:flex-start;
+    height: fit-content;
+    padding: 10% 0 10%;
   }
   .techSideLine {
     visibility: hidden;
@@ -540,23 +548,6 @@ margin-top: 30%;
     width: 100%;
   }
 
-  .projDescripRight a {
-    padding-top: 10%
-  }
-
-  .proj-title {
-    width: fit-content;
-    height: fit-content;
-  }
-  .repoLink, 
-  .testLink {
-    display: inline;
-  }
-
-  .projDescripLeft {
-    width: auto;
-    padding-left: 0;
-  }
 
   #contacts {
     display: flex;
@@ -579,5 +570,9 @@ margin-top: 30%;
 
   .fixed-contacts {
     display: none;
+  }
+
+  .firstP {
+    font-size: 18px;
   }
 }

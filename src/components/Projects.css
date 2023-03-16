@@ -33,8 +33,15 @@
   margin: 0;
 }
 
-.projeto img {
+.img-container {
   width: 500px;
+  height: 500px;
+}
+
+.projeto img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 
@@ -61,4 +68,52 @@
   text-align: center;
   overflow-x: scroll;
   overflow-y: hidden;
+}
+
+@media screen and (max-width: 800px) {
+
+  .img-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .projDescripRight a {
+    padding-top: 10%
+  }
+
+  .projeto {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .projeto p {
+    font-size: 1rem;
+  }
+  
+  .repoLink, 
+  .testLink {
+    display: inline;
+  }
+
+  .projDescripLeft {
+    width: auto;
+    padding-left: 0;
+  }
+
+  .proj-bts a{
+    font-size: 15px;
+    flex-direction: column;
+    display: flex;
+  }
+
+  .fullWindow {
+    height: fit-content;
+    padding: 10% 0 10%;
+  }
+
+  .carrosel {
+    height: fit-content;
+    padding: 10% 0 10%;
+  }
+
 }
