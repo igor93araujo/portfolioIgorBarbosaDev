@@ -49,13 +49,13 @@ header {
   z-index: 99999;
 }
 
-.ul {
+.menu-close {
   display: flex;
   list-style: none;
   margin-right: 5%;
 }
 
-.ul li {
+.menu-close li {
   margin-right: 2%;
 }
 
@@ -248,9 +248,10 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  height: 100vh;
   gap: 30%;
   width: 100%;
+  padding-top: 7%;
 }
 
 #foto-igor {
@@ -309,6 +310,7 @@ p, h1{
 .firstP {
   color:#63EDD2;
   font-weight: 600;
+  font-size: 24px;
   }
   
   .secondP,
@@ -316,6 +318,7 @@ p, h1{
   .fifthP {
     color: rgb(163, 158, 158);
     text-align: justify;
+    font-size: 30px;
   }
   
   .thirdP {
@@ -423,12 +426,14 @@ margin-top: 30%;
 .contactContainer li {
   text-decoration: none;
   list-style: none;
-  font-size: larger;
+  font-size: 15px;
   text-align: center;
+  margin-bottom: 10%;
 }
 
 .contactContainer a {
   color: white;
+  text-decoration: none;
 }
 
 .contactContainer h1 {
@@ -447,14 +452,55 @@ margin-top: 30%;
   .theme-icon {
     width: 60px;
   }
+
+  header {
+    margin-right: 20px;
+  }
  
-  .ul {
-    padding: 0;
-    margin: 0;
+  .menu-close {
+    padding: 10%;
+    margin-top: auto;
     align-items: center;
-    width: 100%;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 1);
+    width: fit-content;
+    visibility: hidden;  
+    border-radius: 10px;
   }
 
+  .menu-open  {
+    padding: 10%;
+    margin-top: auto;
+    margin-right: 10px;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 1);
+    width: fit-content;
+    border-radius: 10px;
+    visibility: visible;
+    animation: menuOpen 0.5s ease-in-out;
+  }
+
+  .menu {
+    color: white;
+  }
+  
+  .menu-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+
+  @keyframes menuOpen {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  
   header a {
     font-size: 13px;
   }
@@ -465,13 +511,25 @@ margin-top: 30%;
     height: 100vh;
     justify-content: center;
     width: 100%;
+    align-items: center;
+    text-align: center;
   }
 
   .presentation-text {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 100%;
+
+  }
+
+
+  .secondP,
+  .forthP,
+  .fifthP  {
+    font-size: 18px;
   }
 
   .thirdP {
@@ -481,6 +539,7 @@ margin-top: 30%;
   .forthP {
     width: 90%;
     padding-top: 10%;
+    text-align: center;
   }
 
   #fullDescription {

@@ -1,15 +1,24 @@
 /* eslint-disable import/no-anonymous-default-export */
-import {React} from 'react'
+import {React, useState} from 'react'
 import '../App.css';
 import {BsFillMoonFill, BsSun} from 'react-icons/bs'
+import {GiHamburgerMenu} from 'react-icons/gi'
+import { RxCross2 } from 'react-icons/rx';
 
 function Header(props){
 
-  // render() {
     const {theme, handleTheme} = props;
+    const [menu, setMenu] = useState(false);
+
+    const handleMenu = () => {
+      setMenu(!menu);
+    }
+
     return (
       <header>
-                <ul className='ul'>
+                <ul
+                  className={menu ? 'menu-open' : 'menu-close'}
+                >
                   {
                     theme === 'light' ?
                     <BsFillMoonFill 
@@ -45,6 +54,21 @@ function Header(props){
                     <li>
                     </li>
                 </ul>
+                <div
+                  className='menu'
+                  onClick= {handleMenu}
+                >
+                  {
+                    menu ?
+                    <RxCross2
+                    className='menu-icon'
+                    />
+                    :
+                    <GiHamburgerMenu
+                    className='menu-icon'
+                    />
+                  }
+                </div>
       </header>
     )
   }
