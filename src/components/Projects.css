@@ -1,7 +1,10 @@
 .fullWindow {
-  width: 100%;
-  max-width: 90%;
-  text-align: center;
+  display: 'flex';
+  flex-direction: 'column';
+  justify-content: 'center';
+  align-items: 'center';
+  padding: 30px;
+  width: 70%;
 }
 
 .fullWindow h1 {
@@ -13,14 +16,11 @@
 }
 
 .projeto {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  margin-right: 5%;
-  margin-left: 5%;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 5%;
+  padding: 10%;
 }
 
 .projeto h1 {
