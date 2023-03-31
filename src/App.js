@@ -5,7 +5,7 @@ import Presentation from './components/Presentation';
 import About from './components/About';
 import {BsGithub, BsLinkedin, BsInstagram} from 'react-icons/bs';
 import Tecnologies from './components/Tecnologies';
-import Projects from './components/ProjectsTest';
+import Projects from './components/Projects';
 import Contacts from './components/Contacts';
 
 function App(){
