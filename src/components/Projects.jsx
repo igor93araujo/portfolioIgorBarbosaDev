@@ -25,10 +25,16 @@ export default function Projects() {
                 <img src={image} alt={name} className='d-block w-100' />
               </div>
               <div className='proj-bts'>
-                <a href={repo}
-                className='repoLink'>Respositório</a>
-                <a href={deploy}
-                className='testLink'>Teste aqui</a>
+                <a
+                  href={repo}
+                  className='repoLink'
+                  target='_blank' rel="noreferrer"
+                >Respositório</a>
+                <a
+                href={deploy}
+                className='testLink'
+                target='_blank' rel="noreferrer"  
+              >Teste aqui</a>
               </div>
             </div>
       </Carousel.Item>
