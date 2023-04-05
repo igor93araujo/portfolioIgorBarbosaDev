@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import image from '../images/IMG_20220925_180308-removebg-preview.png'
+import image from '../images/igorIASemFundo.png'
 import '../App.css';
 
 export default class About extends Component {
