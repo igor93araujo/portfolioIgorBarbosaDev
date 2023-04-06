@@ -7,9 +7,9 @@ import { RxCross2 } from 'react-icons/rx';
 
 function Header(props){
 
-    const {theme, handleTheme} = props;
+    const {theme, handleTheme, mobile } = props;
     const [menu, setMenu] = useState(false);
-
+    
     const handleMenu = () => {
       setMenu(!menu);
     }
@@ -59,6 +59,8 @@ function Header(props){
                   onClick= {handleMenu}
                 >
                   {
+                  mobile &&
+                  (
                     menu ?
                     <RxCross2
                     className='menu-icon'
@@ -67,6 +69,7 @@ function Header(props){
                     <GiHamburgerMenu
                     className='menu-icon'
                     />
+                    )
                   }
                 </div>
       </header>
