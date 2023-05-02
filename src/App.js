@@ -12,7 +12,9 @@ function App(){
 
   const [theme, setTheme ] = useState('dark');
   const [active, setMode ] = useState(false);
-  const [mobile, setMobile] = useState(false);
+  const [mobile, setMobile] = useState(
+    window.innerWidth < 800 ? true : false
+  );
 
   const handleTheme = () => {
     if (theme === 'dark') {

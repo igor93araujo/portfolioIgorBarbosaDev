@@ -29,7 +29,7 @@ export default function Projects() {
                   href={repo}
                   className='repoLink'
                   target='_blank' rel="noreferrer"
-                >Respositório</a>
+                >Repositório</a>
                 <a
                 href={deploy}
                 className='testLink'
