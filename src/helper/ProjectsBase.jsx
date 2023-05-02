@@ -1,10 +1,10 @@
-import NetflixCLone from '../Gifs/netflixCloneGif.gif';
-import TrybeTunes from '../Gifs/TrybeTunesIgor.gif';
-import Lanchonete from '../Gifs/lanchonete.gif';
-import trivia from '../Gifs/trivia.gif';
-import tribeWallet from '../Gifs/trybeWallet.gif';
-import starWars from '../Gifs/StarWarsFIlters.gif';
-import recipesApp from '../Gifs/recipesApp.gif';
+import NetflixCLone from '../Gifs/netflixClone.png';
+import TrybeTunes from '../Gifs/TrybeTunes.png';
+import Lanchonete from '../Gifs/lanchonete-online.png';
+import trivia from '../Gifs/trivia.png';
+import tribeWallet from '../Gifs/trybeWallet.png';
+import starWars from '../Gifs/StarWarsFIlters.png';
+import recipesApp from '../Gifs/recipesApp.png';
 
 export const projList = [
   {
