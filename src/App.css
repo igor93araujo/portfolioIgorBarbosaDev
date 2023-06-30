@@ -53,6 +53,7 @@ header {
   top: 0;
   right: 0;
   z-index: 99999;
+  padding: 0 50px;
 }
 
 .menu-close {
@@ -373,6 +374,7 @@ p, h1{
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 20px 0;
 }
 
 .hardSkills {
@@ -382,6 +384,7 @@ p, h1{
   gap: 1rem;
   font-size: small;
   width: 100%;
+  margin-top: 20px;
 }
 
 .hardSkills li {
@@ -389,6 +392,11 @@ p, h1{
   flex-direction: column;
   justify-content:flex-start;
   align-items:center;
+}
+
+.hardSkills a {
+  text-decoration: none;
+  color: white;
 }
 
 .hardSkills img {

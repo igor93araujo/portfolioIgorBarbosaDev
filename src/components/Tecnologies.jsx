@@ -34,7 +34,7 @@ export default class Tecnologies extends Component {
                 href='https://en.wikipedia.org/wiki/JavaScript'
                 target='_blank' rel="noreferrer"><li>JavaScript<img src={js} alt="javascript_logo"/></li></a>
                 <a href='https://react.dev/' target='_blank' rel="noreferrer">
-                  <li>React<img src={react} alt="reactLogo"/></li></a>
+                  <li>ReactJs<img src={react} alt="reactLogo"/></li></a>
                 <a href='https://jestjs.io/pt-BR/' target='_blank' rel="noreferrer"><li>Jest<img src={jest} alt="reactLogo"/></li></a>
                 <a href='https://testing-library.com/docs/react-testing-library/intro/' target='_blank' rel="noreferrer"><li>RTL<img src={rtl} alt="rtlLogo"/></li></a>
             </ul>
