@@ -111,7 +111,6 @@ header {
 .listDesk {
   width: fit-content;
   color: white;
-
 }
 
 .listItems {
@@ -389,9 +388,9 @@ p, h1{
 
 .hardSkills li {
   display: flex;
+  justify-content: flex-end;
   flex-direction: column;
-  justify-content:flex-start;
-  align-items:center;
+  cursor: pointer;
 }
 
 .hardSkills a {
@@ -400,7 +399,7 @@ p, h1{
 }
 
 .hardSkills img {
-  width: 10rem;
+  width: 120px;
   transform: scale(0.9);
 }
 
@@ -408,6 +407,7 @@ p, h1{
   transform: scale(1);
   transition: ease-in 0.2s;
 }
+
 
 .gitIcon{
 margin-top: 30%;
